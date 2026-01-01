@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    background-color: #eeeae5;
+    color: #333;
+    line-height: 1.6;
+}
+nav{
+    background-color: #292117;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav .logo{
+    font-size: 24px;
+    font-weight: bold;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    transition: color 0.3s;
+    position: relative;
+}
+nav ul li a::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #5c473a;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s;
+}
+nav ul li a:hover::after{
+    width: 100px;
+}
+nav ul li a:hover{
+    color: #c7aa92;
+}
+header{
+    background: linear-gradient(to right, #443529, #a1825e);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+header h1{
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+.intro{
+    background-color: #fff;
+    text-align: center;
+    padding: 40px 20px
+}
+.profile-pic{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #463321;
+    margin-bottom: 20px;
+}
+.intro h1 span{
+    color: #302720;
+}
+.intro p{
+    font-size: 18px;
+    color: #555;
+}
+.section{
+    background-color: #fff;
+    margin: 30px auto;
+    padding: 30px;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.section h1, .section h2{
+    color: #3b2e23;
+    margin-bottom: 15px;
+}
+.section p{
+    margin-bottom: 15px;
+}
+.sub-section{
+    margin-top: 30px;
+}
+.sub-section ul{
+    margin-left: 20px;
+}
+ul, ol{
+    margin-left: 20px;
+}
+li{
+    margin-bottom: 8px;
+}
+.gallery {
+    margin-top: 25px;
+    text-align: center;
+}
+.gallery img{
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.caption{
+    font-weight: bold;
+    color: #444;
+}
+.achievements-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+.achievements-card{
+    background-color: #f9fafb;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.achievements-card:hover{
+    transform: translate(-8px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+.achievements-card i{
+    font-size: 32px;
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+.achievements-card img{
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+#contact p{
+    margin-bottom: 8px;
+}
+footer{
+    background-color: #1f2933;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+.dark-toggle{
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.dark-toggle:hover{
+    background-color: #1b343f;
+    color: #000;
+}
+body.dark-mode{
+    background-color: #111827;
+    color: #e5e7eb;
+}
+body.dark-mode nav{
+    background-color: #020617;
+}
+body.dark-mode header{
+    background: linear-gradient(to right, #0f172a, #1e2933);
+}
+body.dark-mode .section{
+    background-color: #1f2933;
+    color: #e5e7eb;
+}
+body.dark-mode .achievements-card{
+    background-color: #020617;
+}
+body.dark-mode footer{
+    background-color: #020617;
+}
+body.dark-mode a{
+    color: #143341;
+}
+body.dark-mode .caption{
+    color: #cbd5f5;
+}
+body.dark-mode .intro{
+    background-color: #070c18;
+}
+body.dark-mode h1, body.dark-mode h2{
+    color: #286f8d;
+}
+body.dark-mode .intro h1 span{
+    color: #1b4272;
+}
+body.dark-mode .profile-pic{
+    border-color: #152647;
+}
+body.dark-mode #contact a{
+    color: #38bdf8;
+}
+@media (max-width: 768px){
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav ul{
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+    nav ul li{
+        margin: 8px 0;
+    }
+    header h1{
+        font-size: 26px;
+    }
+    .intro h1{
+        font-size: 22px;
+    }
+    .profile-pic{
+        width: 140px;
+        height: 140px;
+    }
+    .section{
+        margin: 20px 20px;
+        padding: 20px;
+    }
+    .gallery img{
+        max-width: 100%;
+    }
+}
